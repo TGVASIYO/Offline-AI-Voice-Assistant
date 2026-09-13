@@ -81,25 +81,32 @@ F --> G["📊 Results"]
 
 ### 🖥️ Main Application
 
-<!-- 📷 PLACE YOUR SCREENSHOT HERE -->
+<img width="650" height="500" alt="1_main_menu" src="https://github.com/user-attachments/assets/efe95df6-cb8e-4ca8-bac3-ee9e0e7a63d8" />
+
 
 <br><br><br>
 
 ### 👨‍🎓 Student Management
 
-<!-- 📷 PLACE YOUR SCREENSHOT HERE -->
+<img width="950" height="340" alt="3_search_student" src="https://github.com/user-attachments/assets/bea2fa16-73c6-45cb-9709-18925ea13205" />
+<img width="1150" height="508" alt="2_view_all_students" src="https://github.com/user-attachments/assets/056a8039-d5ad-4ff8-b50c-d70d97a66aba" />
+
 
 <br><br><br>
 
 ### 🤖 ML Prediction
 
-<!-- 📷 PLACE YOUR SCREENSHOT HERE -->
+<img width="750" height="628" alt="4_data_cleaning" src="https://github.com/user-attachments/assets/7daf796e-5140-4402-b2f7-da77ed33203d" />
+<img width="750" height="268" alt="6_ml_prediction" src="https://github.com/user-attachments/assets/c35faf93-8b47-497b-90ae-62ddccece7fa" />
+<img width="650" height="220" alt="5_model_training" src="https://github.com/user-attachments/assets/e78556a2-050d-4f55-a5ed-213a8450095d" />
+
 
 <br><br><br>
 
 ### 📊 Results & Analysis
+<img width="1120" height="700" alt="8_feature_importance_chart" src="https://github.com/user-attachments/assets/8a2eb2cf-5a9a-4846-a557-7259a8a3a676" />
+<img width="650" height="220" alt="7_model_accuracy" src="https://github.com/user-attachments/assets/70af33b1-cebe-4706-9733-fe6eb1a69950" />
 
-<!-- 📷 PLACE YOUR SCREENSHOT HERE -->
 
 <br><br><br>
 
