@@ -1,112 +1,99 @@
-<div align="center">
+# 🎓 Student Performance Prediction & Management System
 
-# 🎙️ Offline AI Voice Assistant
+<p align="center">
 
-### *An assistant with ears and a mouth — that never needs the internet.*
+**🤖 Machine Learning + 🗄️ MySQL + 🐍 Python**
 
-![Status](https://img.shields.io/badge/status-in%20progress-orange?style=for-the-badge)
-![Python](https://img.shields.io/badge/python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Offline](https://img.shields.io/badge/runs-100%25%20offline-2ea44f?style=for-the-badge)
-![License](https://img.shields.io/badge/license-TBD-lightgrey?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge\&logo=python)
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange?style=for-the-badge\&logo=mysql)
+![ML](https://img.shields.io/badge/Machine-Learning-green?style=for-the-badge)
 
-</div>
+</p>
 
----
+> A Python-based student management system that combines **MySQL database operations with Machine Learning** to analyze and predict student performance.
 
-## 🌟 Overview
+## 🚀 Features
 
-This project is an AI-powered voice assistant designed to work **completely offline** — no cloud, no API calls, no internet connection required.
+| 👨‍🎓 Students | 🧹 Data    | 🤖 ML          | 📊 Analysis        |
+| -------------- | ---------- | -------------- | ------------------ |
+| Add / Edit     | Clean Data | Train Model    | Accuracy           |
+| Search         | Validate   | Predict Result | Feature Importance |
+| Delete         | Process    | Evaluate       | Insights           |
 
-Unlike Siri, Alexa, or Google Assistant, everything happens **on the device itself**:
+## 🔄 System Workflow
 
-| 👂 Ears | 🧠 Brain | 🗣️ Mouth |
-|:---:|:---:|:---:|
-| Listens to speech | Understands & responds | Speaks the answer back |
-
----
-
-## 💡 Why Offline?
-
-| Problem with cloud assistants | 🔧 How this project solves it |
-|---|---|
-| 🌐 Needs constant internet | Runs fully on-device |
-| 🔓 Sends your voice to servers | 100% private — nothing leaves your machine |
-| 🐢 Network lag on every request | Local inference = faster response |
-
----
-
-## 🛠️ Planned Tech Stack
-
-> *Still being finalized — this is the current direction!*
-
-| Layer | Tool (candidate) | Badge |
-|---|---|---|
-| 🎤 Speech-to-Text | Whisper / whisper.cpp | ![Whisper](https://img.shields.io/badge/OpenAI-Whisper-412991?style=flat-square&logo=openai&logoColor=white) |
-| 🧠 Language Model | Local LLM via Ollama (Gemma / Phi) | ![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-000000?style=flat-square) |
-| 🔊 Text-to-Speech | Piper TTS | ![Piper](https://img.shields.io/badge/Piper-TTS-FF6B6B?style=flat-square) |
-| 🐍 Language | Python | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) |
-
----
-
-## 🔄 How It Works
-
-```
-        🎤  MIC INPUT
-            │
-            ▼
-   ┌─────────────────────┐
-   │   Speech → Text      │   (Whisper)
-   └─────────────────────┘
-            │
-            ▼
-   ┌─────────────────────┐
-   │  Local LLM Thinks 🧠  │   (Ollama)
-   └─────────────────────┘
-            │
-            ▼
-   ┌─────────────────────┐
-   │   Text → Speech       │   (Piper)
-   └─────────────────────┘
-            │
-            ▼
-        🔊  SPOKEN REPLY
+```mermaid
+flowchart LR
+A[👨‍🎓 Student Data] --> B[(🗄️ MySQL)]
+B --> C[🧹 Data Cleaning]
+C --> D[🤖 ML Model]
+D --> E[🔮 Prediction]
+E --> F[📊 Analysis]
 ```
 
-**Zero cloud calls. Zero data leaves the device.** ✅
+## 🏗️ Architecture
 
----
+```text
+👤 User
+  ↓
+💻 CLI Application
+  ↓
+┌───────────────┐
+│ Student Mgmt  │
+│ Data Cleaning │
+│ ML Prediction │
+│ Evaluation    │
+└───────┬───────┘
+        ↓
+   🗄️ MySQL + 🤖 ML
+```
 
-## ✅ Goals / Roadmap
+## 📸 Screenshots
 
-- [x] Define project concept & pipeline
-- [ ] Finalize the tech stack (STT / LLM / TTS)
-- [ ] Build working end-to-end pipeline
-- [ ] Optimize latency on limited hardware
-- [ ] Add wake-word detection 🎯
-- [ ] Package into an easy-to-run app 📦
+### 🖥️ Main Menu
 
----
+<!-- INSERT SCREENSHOT HERE -->
 
-## 🚀 Getting Started
+<br><br><br><br>
 
-> Setup instructions coming soon — once the pipeline is working!
+### 👨‍🎓 Student Management
 
----
+<!-- INSERT SCREENSHOT HERE -->
 
-## 👤 Author
+<br><br><br><br>
 
-<div align="center">
+### 🤖 Prediction & Model Results
+
+<!-- INSERT SCREENSHOT HERE -->
+
+<br><br><br><br>
+
+## 🛠️ Tech Stack
+
+**Python • MySQL • Pandas • NumPy • Scikit-learn • Git/GitHub**
+
+## ⚙️ Run Locally
+
+```bash
+git clone https://github.com/TGVASIYO/student-performance-prediction.git
+cd student-performance-prediction
+pip install -r requirements.txt
+python main.py
+```
+
+## 🎯 Project Highlights
+
+* 🗄️ Persistent MySQL student records
+* 🔄 Complete CRUD operations
+* 🧹 Data preprocessing & validation
+* 🤖 Machine Learning prediction
+* 📈 Model accuracy & feature importance
+* 💻 Fully command-line executable
+
+## 👨‍💻 Author
 
 **Priyabrata Patra**
-Integrated M.Tech, Computer Science & Engineering (Artificial Intelligence)
-Vellore Institute of Technology, Bhopal
+Integrated M.Tech — Artificial Intelligence | VIT Bhopal
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/priyabrata-patra-bb47b0366)
+⭐ **If you find this project useful, consider starring the repository!**
 
-</div>
-
----
-
-<div align="center">
-<sub>⭐ Star this repo if you're curious where it goes!</sub>
-</div>
