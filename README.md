@@ -1,160 +1,658 @@
-# 🎓 Student Performance Prediction & Management System
+# 🤖 AURA — Offline AI Voice Assistant
+
+<p align="center">
+  <b>Private by Design • Natural by Default</b>
+</p>
+
+<p align="center">
+  An intelligent, voice-enabled AI assistant designed to run locally,
+  combining speech recognition, an AI brain, memory, and natural voice interaction.
+</p>
 
 <p align="center">
 
-### 🐍 Python  •  🗄️ MySQL  •  🤖 Machine Learning  •  📊 Analytics
-
-![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge\&logo=mysql\&logoColor=white)
-![Scikit Learn](https://img.shields.io/badge/Scikit--learn-Machine%20Learning-F7931E?style=for-the-badge\&logo=scikit-learn\&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-Project-181717?style=for-the-badge\&logo=github)
-
-**Manage students → Process data → Train ML → Predict performance → Analyze results**
+![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge\&logo=python)
+![AI](https://img.shields.io/badge/AI-Local%20AI-purple?style=for-the-badge)
+![STT](https://img.shields.io/badge/STT-Whisper-orange?style=for-the-badge)
+![TTS](https://img.shields.io/badge/TTS-Piper-green?style=for-the-badge)
+![Wake Word](https://img.shields.io/badge/Wake%20Word-openWakeWord-red?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-In%20Development-yellow?style=for-the-badge)
 
 </p>
 
 ---
 
-## 💡 The Idea
+## 🧠 What is AURA?
 
-> 🎯 **Turn student data into meaningful performance insights.**
+**AURA** is a localized AI voice assistant built with the goal of providing a more **private, natural, and interactive AI experience**.
 
-This project combines **database management + data preprocessing + machine learning** in one practical application. Student records are stored in MySQL, processed using Python, and used to train a model for performance prediction.
+Instead of depending entirely on cloud-based services, AURA is designed around **local/offline components wherever practical**.
+
+The assistant listens for its wake word, converts speech into text, processes the request through its AI brain, and converts the generated response back into natural speech.
+
+### ✨ Core Idea
+
+> **Speak → Understand → Think → Respond → Speak**
 
 ---
 
-## ✨ What Can It Do?
+# ⚡ AURA at a Glance
 
 ```text
-┌─────────────────┐    ┌─────────────────┐
-│ 👨‍🎓 STUDENTS   │    │ 🗄️ DATABASE    │
-│                 │    │                 │
-│ Add • Edit      │───▶│ MySQL Records   │
-│ Search • Delete │    │ Persistent Data │
-└─────────────────┘    └────────┬────────┘
-                                │
-                                ▼
-┌─────────────────┐    ┌─────────────────┐
-│ 🧹 DATA         │───▶│ 🤖 MACHINE      │
-│ PROCESSING      │    │ LEARNING        │
-│                 │    │                 │
-│ Clean • Validate│    │ Train • Predict │
-└─────────────────┘    └────────┬────────┘
-                                │
-                                ▼
-                       ┌─────────────────┐
-                       │ 📊 INSIGHTS     │
-                       │                 │
-                       │ Accuracy        │
-                       │ Feature Impact  │
-                       └─────────────────┘
+                         ┌─────────────────┐
+                         │      👤 USER    │
+                         └────────┬────────┘
+                                  │
+                             🎙️ Voice Input
+                                  │
+                                  ▼
+                    ┌─────────────────────────┐
+                    │   🔔 WAKE WORD          │
+                    │      openWakeWord       │
+                    │     "Hey AURA"          │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │   🎧 SPEECH TO TEXT     │
+                    │         Whisper          │
+                    └────────────┬────────────┘
+                                 │
+                              Text
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │      🧠 AURA BRAIN      │
+                    │       Qwen 4B            │
+                    │                         │
+                    │ Understanding           │
+                    │ Reasoning               │
+                    │ Response Generation     │
+                    └────────────┬────────────┘
+                                 │
+                           Response Text
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │      🔊 TEXT TO SPEECH  │
+                    │          Piper          │
+                    └────────────┬────────────┘
+                                 │
+                              🔊 Voice
+                                 │
+                                 ▼
+                         ┌───────────────┐
+                         │ 👤 USER HEARS │
+                         └───────────────┘
 ```
 
 ---
 
-## 🔄 ML Pipeline
-
-```mermaid
-flowchart LR
-A["👨‍🎓 Student Data"] --> B["🗄️ MySQL"]
-B --> C["🧹 Cleaning"]
-C --> D["📋 Features"]
-D --> E["🤖 ML Model"]
-E --> F["🔮 Prediction"]
-F --> G["📊 Results"]
-```
-
----
-
-## 🚀 Core Features
-
-| 👨‍🎓 Management | 🧹 Processing |   🤖 ML  |     📊 Insights    |
-| :--------------: | :-----------: | :------: | :----------------: |
-|        Add       |     Clean     |   Train  |      Accuracy      |
-|      Search      |    Validate   |  Predict | Feature Importance |
-|       Edit       |    Prepare    | Evaluate |       Results      |
-|      Delete      |    Process    |  Analyze |         📈         |
-
----
-
-## 📸 Project Showcase
-
-### 🖥️ Main Application
-
-<img width="650" height="500" alt="1_main_menu" src="https://github.com/user-attachments/assets/efe95df6-cb8e-4ca8-bac3-ee9e0e7a63d8" />
-
-
-<br><br><br>
-
-### 👨‍🎓 Student Management
-
-<img width="950" height="340" alt="3_search_student" src="https://github.com/user-attachments/assets/bea2fa16-73c6-45cb-9709-18925ea13205" />
-<img width="1150" height="508" alt="2_view_all_students" src="https://github.com/user-attachments/assets/056a8039-d5ad-4ff8-b50c-d70d97a66aba" />
-
-
-<br><br><br>
-
-### 🤖 ML Prediction
-
-<img width="750" height="628" alt="4_data_cleaning" src="https://github.com/user-attachments/assets/7daf796e-5140-4402-b2f7-da77ed33203d" />
-<img width="750" height="268" alt="6_ml_prediction" src="https://github.com/user-attachments/assets/c35faf93-8b47-497b-90ae-62ddccece7fa" />
-<img width="650" height="220" alt="5_model_training" src="https://github.com/user-attachments/assets/e78556a2-050d-4f55-a5ed-213a8450095d" />
-
-
-<br><br><br>
-
-### 📊 Results & Analysis
-<img width="1120" height="700" alt="8_feature_importance_chart" src="https://github.com/user-attachments/assets/8a2eb2cf-5a9a-4846-a557-7259a8a3a676" />
-<img width="650" height="220" alt="7_model_accuracy" src="https://github.com/user-attachments/assets/70af33b1-cebe-4706-9733-fe6eb1a69950" />
-
-
-<br><br><br>
-
----
-
-## 🛠️ Tech Stack
+# 🏗️ System Architecture
 
 ```text
-🐍 Python        → Application & ML Logic
-🗄️ MySQL         → Persistent Student Data
-🐼 Pandas        → Data Processing
-🔢 NumPy         → Numerical Operations
-🤖 Scikit-learn  → Machine Learning
-🔧 Git/GitHub    → Version Control
+┌────────────────────────────────────────────────────────────┐
+│                         AURA                               │
+│                                                            │
+│  ┌──────────┐     ┌───────────┐     ┌──────────────────┐  │
+│  │ 🎙️ Mic   │ ──▶ │ Wake Word │ ──▶ │   Speech to Text │  │
+│  │          │     │ openWake  │     │      Whisper     │  │
+│  └──────────┘     └───────────┘     └────────┬─────────┘  │
+│                                               │            │
+│                                               ▼            │
+│                                    ┌──────────────────┐   │
+│                                    │    🧠 AI BRAIN   │   │
+│                                    │      Qwen 4B     │   │
+│                                    │                  │   │
+│                                    │ • Understanding  │   │
+│                                    │ • Reasoning      │   │
+│                                    │ • Response       │   │
+│                                    └────────┬─────────┘   │
+│                                             │             │
+│                                             ▼             │
+│                                    ┌──────────────────┐   │
+│                                    │   Text to Speech │   │
+│                                    │      Piper       │   │
+│                                    └────────┬─────────┘   │
+│                                             │             │
+│                                             ▼             │
+│                                         🔊 Speaker        │
+│                                                            │
+└────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## ⚡ Quick Start
+# 🧩 Core Components
+
+| Component         | Technology                                 | Purpose                                        |
+| ----------------- | ------------------------------------------ | ---------------------------------------------- |
+| 🔔 Wake Word      | **openWakeWord**                           | Detects `"Hey AURA"`                           |
+| 🎧 Speech-to-Text | **Whisper**                                | Converts speech → text                         |
+| 🧠 AI Brain       | **Qwen 4B**                                | Understands input and generates responses      |
+| 🔊 Text-to-Speech | **Piper**                                  | Converts text → spoken response                |
+| 💾 Memory         | SQLite / Vector DB *(planned)*             | Stores useful conversational context           |
+| 🔎 RAG            | Retrieval-Augmented Generation *(planned)* | Provides relevant stored information to the AI |
+| 🖥️ Interface     | 2D / expressive UI *(planned)*             | Visual interaction with AURA                   |
+
+---
+
+# 🔄 How AURA Works
+
+### 1️⃣ Wake Word Detection
+
+AURA continuously monitors the microphone for the activation phrase:
+
+```text
+"Hey AURA"
+```
+
+The wake-word component detects the phrase before the main voice-processing pipeline begins.
+
+---
+
+### 2️⃣ Speech Recognition
+
+After activation, the user's speech is captured and processed by **Whisper**.
+
+```text
+🎙️ "Hey AURA, what is machine learning?"
+
+                    ↓
+
+        Whisper Speech Recognition
+
+                    ↓
+
+"What is machine learning?"
+```
+
+---
+
+### 3️⃣ AI Processing
+
+The recognized text is sent to the **Qwen 4B** local AI model.
+
+```text
+User Text
+    ↓
+Qwen 4B
+    ↓
+Understanding
+    ↓
+Reasoning
+    ↓
+Response Generation
+```
+
+---
+
+### 4️⃣ Voice Response
+
+The generated response is passed to **Piper**.
+
+```text
+AI Response
+     ↓
+   Piper
+     ↓
+   🔊 Voice
+```
+
+AURA then speaks the response through the speaker.
+
+---
+
+# 🧠 AI Pipeline
+
+```text
+             USER
+               │
+               ▼
+        ┌─────────────┐
+        │  Microphone │
+        └──────┬──────┘
+               ▼
+        ┌─────────────┐
+        │ Wake Word   │
+        │ openWakeWord│
+        └──────┬──────┘
+               ▼
+        ┌─────────────┐
+        │   Whisper   │
+        │     STT     │
+        └──────┬──────┘
+               ▼
+        ┌─────────────┐
+        │   Qwen 4B   │
+        │  AI Brain   │
+        └──────┬──────┘
+               ▼
+        ┌─────────────┐
+        │    Piper    │
+        │     TTS     │
+        └──────┬──────┘
+               ▼
+             🔊
+            AUDIO
+```
+
+---
+
+# 🔐 Why Local AI?
+
+AURA follows a **local-first approach**.
+
+### ☁️ Traditional Cloud Assistant
+
+```text
+User
+ ↓
+Internet
+ ↓
+Cloud Server
+ ↓
+AI Model
+ ↓
+Internet
+ ↓
+User
+```
+
+### 🖥️ AURA
+
+```text
+User
+ ↓
+Local Computer
+ ↓
+Local AI Pipeline
+ ↓
+Response
+ ↓
+User
+```
+
+### Benefits
+
+* 🔒 Greater privacy
+* 🌐 Reduced dependence on internet connectivity
+* ⚡ Potentially lower interaction latency
+* 💻 Local processing
+* 🧩 More control over the AI pipeline
+
+> AURA aims to keep sensitive voice and conversational data local wherever the implementation allows.
+
+---
+
+# 🧠 Planned Memory + RAG
+
+AURA can be extended with a memory system.
+
+```text
+                User Query
+                    │
+                    ▼
+             ┌─────────────┐
+             │   Memory    │
+             │   Search    │
+             └──────┬──────┘
+                    │
+             Relevant Context
+                    │
+                    ▼
+             ┌─────────────┐
+             │   Qwen 4B   │
+             │   AI Brain  │
+             └──────┬──────┘
+                    │
+                    ▼
+                Response
+```
+
+### RAG can help AURA:
+
+* 📚 Retrieve stored information
+* 🧠 Provide conversational context
+* 🔎 Search a local knowledge base
+* 📄 Answer questions from selected documents
+* 💾 Improve personalized interactions
+
+---
+
+# 📁 Project Structure
+
+```text
+AURA/
+│
+├── main.py
+│
+├── voice/
+│   ├── wake_word.py
+│   ├── speech_to_text.py
+│   └── text_to_speech.py
+│
+├── tts/
+│   └── piper/
+│
+├── audio/
+│   └── input.wav
+│
+├── models/
+│
+├── memory/
+│
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
+> The exact folder structure may evolve as additional AURA modules are integrated.
+
+---
+
+# 🛠️ Technology Stack
+
+```text
+                 AURA TECHNOLOGY STACK
+
+       ┌──────────────────────────────┐
+       │       🐍 Python 3.12         │
+       └──────────────┬───────────────┘
+                      │
+        ┌─────────────┼─────────────┐
+        ▼             ▼             ▼
+   openWakeWord    Whisper        Piper
+     🔔 Wake       🎧 STT         🔊 TTS
+                      │
+                      ▼
+                 Qwen 4B
+                  🧠 AI
+                      │
+              ┌───────┴───────┐
+              ▼               ▼
+           SQLite            RAG
+          💾 Memory        🔎 Retrieval
+```
+
+---
+
+# 🚀 Current Development Status
+
+| Feature                          | Status         |
+| -------------------------------- | -------------- |
+| Python environment               | ✅ Completed    |
+| Microphone recording             | ✅ Completed    |
+| Whisper STT                      | ✅ Working      |
+| Piper TTS                        | ✅ Working      |
+| openWakeWord installation        | ✅ Completed    |
+| `"Hey AURA"` wake-word detection | 🔄 Integration |
+| Qwen 4B integration              | 🔄 Development |
+| AI response pipeline             | 🔄 Development |
+| Memory                           | 🔜 Planned     |
+| RAG                              | 🔜 Planned     |
+| Emotion state                    | 🔜 Planned     |
+| 2D Avatar                        | 🔜 Planned     |
+| Full offline assistant           | 🔄 Development |
+
+---
+
+# 🎯 Project Goals
+
+### 🔒 Privacy
+
+Keep processing local wherever possible.
+
+### 🗣️ Natural Interaction
+
+Make interaction feel conversational rather than command-based.
+
+### 🧠 Intelligence
+
+Use a local AI model to understand and respond to user requests.
+
+### ⚡ Accessibility
+
+Allow users to interact naturally through voice.
+
+### 🧩 Modularity
+
+Keep AURA's voice, AI, memory, and interface components modular so they can be improved independently.
+
+---
+
+# 🧪 Example Interaction
+
+```text
+👤 User:
+"Hey AURA"
+
+        ↓
+
+🔔 Wake Word Detected
+
+        ↓
+
+🎙️ User:
+"What is artificial intelligence?"
+
+        ↓
+
+🎧 Whisper:
+"What is artificial intelligence?"
+
+        ↓
+
+🧠 Qwen 4B:
+Generates response
+
+        ↓
+
+🔊 Piper:
+Speaks the response
+
+        ↓
+
+🤖 AURA:
+"Artificial intelligence is..."
+```
+
+---
+
+# 📸 Screenshots
+
+### 🎙️ Voice Input
+
+> Add screenshot here
+
+```text
+[ SCREENSHOT ]
+```
+
+### 🔔 Wake Word Detection
+
+> Add screenshot here
+
+```text
+[ SCREENSHOT ]
+```
+
+### 🧠 AI Response
+
+> Add screenshot here
+
+```text
+[ SCREENSHOT ]
+```
+
+### 🔊 Voice Output
+
+> Add screenshot here
+
+```text
+[ SCREENSHOT ]
+```
+
+---
+
+# 📊 Future Roadmap
+
+```text
+                    AURA ROADMAP
+
+      ┌─────────────────────────────┐
+      │ Phase 1                     │
+      │ 🎙️ Voice Pipeline           │
+      │ STT + TTS + Wake Word       │
+      └──────────────┬──────────────┘
+                     ▼
+      ┌─────────────────────────────┐
+      │ Phase 2                     │
+      │ 🧠 Local AI Brain           │
+      │ Qwen + Ollama               │
+      └──────────────┬──────────────┘
+                     ▼
+      ┌─────────────────────────────┐
+      │ Phase 3                     │
+      │ 💾 Memory + RAG             │
+      │ Context + Knowledge         │
+      └──────────────┬──────────────┘
+                     ▼
+      ┌─────────────────────────────┐
+      │ Phase 4                     │
+      │ 🎭 Interactive Avatar       │
+      │ Emotion + Animation         │
+      └──────────────┬──────────────┘
+                     ▼
+      ┌─────────────────────────────┐
+      │ Phase 5                     │
+      │ 🚀 Full AI Assistant        │
+      │ Local + Natural + Personal  │
+      └─────────────────────────────┘
+```
+
+---
+
+# ⚙️ Installation
+
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/TGVASIYO/student-performance-prediction.git
-cd student-performance-prediction
+git clone https://github.com/TGVASIYO/AURA.git
+cd AURA
+```
+
+### 2. Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+### 3. Activate the environment
+
+**Windows PowerShell:**
+
+```powershell
+.\venv\Scripts\Activate.ps1
+```
+
+### 4. Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
+
+### 5. Run AURA
+
+```bash
 python main.py
 ```
 
 ---
 
-## 🎯 What This Project Demonstrates
+# 📦 Dependencies
 
-**Database Design** • **CRUD Operations** • **Data Cleaning**
-**Machine Learning** • **Prediction** • **Model Evaluation**
-**Feature Analysis** • **Python Programming** • **Git/GitHub**
+Core components currently include:
+
+```text
+Python
+Whisper
+openWakeWord
+Piper
+PyAudio
+NumPy
+```
+
+Additional dependencies will be added as the AI brain, memory, RAG, and interface modules are integrated.
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Team AURA
 
-**Priyabrata Patra**
-🎓 *Integrated M.Tech — Artificial Intelligence | VIT Bhopal*
+**AURA is being developed as a collaborative project with modular responsibilities across the team.**
+
+### Voice Module
+
+Responsible for:
+
+* 🎙️ Speech input
+* 🎧 Speech-to-Text
+* 🔔 Wake-word detection
+* 🔊 Text-to-Speech integration
+
+---
+
+# 📚 Learning Focus
+
+This project explores:
+
+* Artificial Intelligence
+* Speech Recognition
+* Natural Language Processing
+* Local/Offline AI
+* Large/Small Language Models
+* Text-to-Speech
+* Retrieval-Augmented Generation
+* Vector-based memory
+* Human-AI interaction
+
+---
+
+# 🌟 Vision
+
+> **AURA is not just designed to answer questions.
+> It is designed to become a private, natural and locally running AI companion.**
+
+```text
+        ┌──────────────────────────────┐
+        │                              │
+        │       PRIVATE BY DESIGN      │
+        │                              │
+        │      NATURAL BY DEFAULT      │
+        │                              │
+        │           🤖 AURA            │
+        │                              │
+        └──────────────────────────────┘
+```
+
+---
+
+## 📄 Project Documentation
+
+Additional project documentation, architecture diagrams, testing information and design documents can be found in the `docs/` directory.
+
+---
+
+## ⭐ Support the Project
+
+If you find the project interesting, consider giving the repository a ⭐.
+
+---
 
 <p align="center">
-
-### ⭐ Built with Python • MySQL • Machine Learning
-
-**Student Data → Intelligence → Insights**
-
+  <b>Built with Python • AI • Voice • Curiosity</b>
 </p>
 
-
+<p align="center">
+  🤖 <b>AURA — Private by Design. Natural by Default.</b>
+</p>
